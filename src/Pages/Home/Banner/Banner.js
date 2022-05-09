@@ -20,8 +20,8 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>From $850</h3>
-                    <p>Monitor 4k</p>
+                    <h3 className='text-primary'>From $850</h3>
+                    <p>Iphone 8s</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -32,7 +32,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>From 1200</h3>
+                    <h3 className='text-primary'>From 1200</h3>
                     <p>Surface Laptop</p>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -44,9 +44,9 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>From $680</h3>
+                    <h3 className='text-primary'>From $1680</h3>
                     <p>
-                        Dell Latitude
+                        Apple Latitude
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
