@@ -1,16 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Service.css';
+import './InventoryItem.css';
 
-const Service = ({service}) => {
-    const {id, name, img, description, price} = service;
+const InventoryItem = ({inventoryItem}) => {
+    const {id, name, img, description, price} = inventoryItem;
     const navigate = useNavigate();
 
     const navigateToServiceDetail = id =>{
-        navigate(`/service/${id}`);
+        navigate(`/InventoryItem/${id}`);
     }
     return (
-        <div className='service'>
+        <div className='InventoryItem'>
             <img className='w-100' src={img} alt="" />
             <h2>{name}</h2>
             <p>Price: {price}</p>
@@ -20,4 +20,4 @@ const Service = ({service}) => {
     );
 };
 
-export default Service;
+export default InventoryItem;
