@@ -1,7 +1,8 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import InventoryItems from '../InventoryItems/InventoryItems';
-import OurTeams from '../OurTeams/OurTeam';
+import OurTeams from '../OurTeams/OurTeams';
+
 import Services from '../Services/Services';
 
 
