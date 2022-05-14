@@ -1,44 +1,98 @@
 [
     {
-        "id": 1,
-        "name": "ENGINE DIAGNOSTIC",
-        "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+          "name": "Optical Mouse",
+        "price": "3300",
+        "quantity" : "700",
+        "supplier" : "George",
+        "description": "Inventory Control is crucial for the proper functioning of a warehouse and a company as a whole. It ensures that an appropriate inflow and outflow of inventory are maintained, thus, ensuring that the warehouse is adequately stocked.",
         "img": "https://i.ibb.co/WVpQdn0/pic-6.png"
     },
     {
-        "id": 2,
-        "name": "WHEEL ALIGNMENT",
-        "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+         "name": "Canon Camera",
+        "price": "2100",
+        "quantity" : "12000",
+        "supplier" : "Freddie",
+        "description": "It is always a bad idea to keep your warehouse overloaded. This way, you have not only deadstock but also an unorganized warehouse. This makes it very difficult to manage the space efficiently. Many companies face trouble in properly stocking their warehouse and end up completely exhausted while placing a new order.",
         "img": "https://i.ibb.co/T4SBpQw/pic-5.png"
     },
     {
-        "id": 3,
-        "name": "OIL CHANGING",
-        "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/cx7QD7g/pic-4.png"
+         "name": "OIL CHANGING",
+        "price": "2250",
+        "quantity" : "1700",
+        "supplier" : "Geiger",
+        "description": "Inventory Management streamlines the warehouse and business activities. It ensures the warehouse has adequate products, moreover, utilizes the products efficiently. It determines which product to order and when to order, the right vendor, and the most competitive rates.",
+         "img": "https://i.ibb.co/cx7QD7g/pic-4.png"
     },
     {
-        "id": 4,
-        "name": "BRAKE REPARING",
-        "price": "180",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/bW4bLKk/pic-3.png"
-    },
-    {
-        "id": 5,
-        "name": "WASH AND GLASSING",
-        "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "name": "Canon Camera",
+       "price": "100",
+       "quantity" : "12000",
+       "supplier" : "Freddie",
+       "description": "It is always a bad idea to keep your warehouse overloaded. This way, you have not only deadstock but also an unorganized warehouse. This makes it very difficult to manage the space efficiently. Many companies face trouble in properly stocking their warehouse and end up completely exhausted while placing a new order.",
+       "img": "https://i.ibb.co/T4SBpQw/pic-5.png"
+   },
+    {  
+        "name": "Aspire c7",
+        "price": "1000",
+        "quantity" : "4700",
+        "supplier" : "Noah",
+        "description": "It is always a bad idea to keep your warehouse overloaded. This way, you have not only deadstock but also an unorganized warehouse. This makes it very difficult to manage the space efficiently. Many companies face trouble in properly stocking their warehouse and end up completely exhausted while placing a new order.",
         "img": "https://i.ibb.co/MN2kZJg/pic2.png"
     },
     {
-        "id": 6,
-        "name": "COMPLETE ANALYSIS",
-        "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "name": "Apple iMac 27",
+        "price": "900",
+        "quantity" : "2900",
+        "supplier" : "Oliver",
+        "description": "It is always a bad idea to keep your warehouse overloaded. This way, you have not only deadstock but also an unorganized warehouse. This makes it very difficult to manage the space efficiently. Many companies face trouble in properly stocking their warehouse and end up completely exhausted while placing a new order.",
         "img": "https://i.ibb.co/5R8vhWt/pic-1.png"
-    }
+    },
+    {
+        "name": "Mouse for desktop",
+         "price": "1300",
+         "quantity" : "700",
+         "supplier" : "George",
+         "description": "Inventory Control is crucial for the proper functioning of a warehouse and a company as a whole. It ensures that an appropriate inflow and outflow of inventory are maintained, thus, ensuring that the warehouse is adequately stocked.",
+         "img": "https://i.ibb.co/WVpQdn0/pic-6.png"
+     },
+    {
+        "name": "Apple laptop",
+         "price": "780",
+         "quantity" : "2700",
+         "supplier" : "kleorge",
+         "description": "Inventory Control is crucial for the proper functioning of a warehouse and a company as a whole. It ensures that an appropriate inflow and outflow of inventory are maintained, thus, ensuring that the warehouse is adequately stocked.",
+         "img": "https://i.ibb.co/bW4bLKk/pic-3.png"
+     },
+     {  
+        "name": "Lenovo Desktop",
+        "price": "100",
+        "quantity" : "4700",
+        "supplier" : "Noah",
+        "description": "It is always a bad idea to keep your warehouse overloaded. This way, you have not only deadstock but also an unorganized warehouse. This makes it very difficult to manage the space efficiently. Many companies face trouble in properly stocking their warehouse and end up completely exhausted while placing a new order.",
+        "img": "https://i.ibb.co/MN2kZJg/pic2.png"
+    },
+    {  
+        "name": "Dell Laptop",
+        "price": "900",
+        "quantity" : "4700",
+        "supplier" : "Noah",
+        "description": "It is always a bad idea to keep your warehouse overloaded. This way, you have not only deadstock but also an unorganized warehouse. This makes it very difficult to manage the space efficiently. Many companies face trouble in properly stocking their warehouse and end up completely exhausted while placing a new order.",
+        "img": "https://i.ibb.co/MN2kZJg/pic2.png"
+    },
+    {
+        "name": "Apple Desktop",
+        "price": "600",
+        "quantity" : "2900",
+        "supplier" : "Oliver",
+        "description": "It is always a bad idea to keep your warehouse overloaded. This way, you have not only deadstock but also an unorganized warehouse. This makes it very difficult to manage the space efficiently. Many companies face trouble in properly stocking their warehouse and end up completely exhausted while placing a new order.",
+        "img": "https://i.ibb.co/5R8vhWt/pic-1.png"
+    },
+    {
+     "name": "Mouse for desktop",
+      "price": "300",
+      "quantity" : "700",
+      "supplier" : "George",
+      "description": "Inventory Control is crucial for the proper functioning of a warehouse and a company as a whole. It ensures that an appropriate inflow and outflow of inventory are maintained, thus, ensuring that the warehouse is adequately stocked.",
+      "img": "https://i.ibb.co/WVpQdn0/pic-6.png"
+  }
 ]
