@@ -3,8 +3,8 @@ import img from '../../../images/services.png'
 
 const Services = () => {
     return (
-        <div className='container rounded border border-light pt-3 pb-5 mb-5 shadow-lg mt-5 mb-5 '>
-           <h1 className='text-primary text-center mt-3'>Flexibility in our Services</h1>
+        <div className='container rounded border border-light pt-3 pb-5 mb-5 shadow-lg mt-5 mb-5 p-3'>
+           <h1 className='text-primary text-center mt-4'>Flexibility in Inventory Management</h1>
             
             <img className='img-fluid ' src={img} alt="" />
             

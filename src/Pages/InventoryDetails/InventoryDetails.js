@@ -6,6 +6,7 @@ const InventoryDetails = () => {
     const { id } = useParams();
     const [inventory , setInvntory] = useState({})
     const {  register, handleSubmit } = useForm();
+    const [isReload , setIsReload] = useState(false)
     
     
     useEffect( ()=>{
@@ -13,7 +14,7 @@ const InventoryDetails = () => {
         fetch(url)
        .then(res => res.json())
         .then(data => setInvntory(data))
-    }, [])
+    }, [isReload])
 
 //    const handleDeliver = event =>{
 //        const updateQuantity = event.target.value;
@@ -32,12 +33,10 @@ const InventoryDetails = () => {
 //    .then(data => setInvntory( data));
    
 //    };
-     
-   //post
-   const onSubmit = data => {
-    console.log(data);
-    
-    const url = `http://localhost:4000/inventoryItem/${id}?quantity`;
+const handleDelivered = data => {
+   const previousQuantity = inventory.quantity
+   inventory.quantity = previousQuantity + 1;
+    const url = `http://localhost:4000/inventoryItem/${id}`;
     fetch(url, {
         method: 'PUT',
         headers: {
@@ -46,37 +45,66 @@ const InventoryDetails = () => {
         body: JSON.stringify(data)
     })
     .then(res=> res.json())
-    .then(result =>{
-        console.log(result);
+    .then(data =>{
+        setInvntory(data);
+        setIsReload(!isReload)
+    } )
+};
+   
+   const onSubmit = data => {
+    // let preQuantity = setInvntory(data);
+    // preQuantity.setQuantity(preQuantity.getQuantity() - 1);
+    
+    let preQuantity = inventory.quantity
+    const newQuantity = data + preQuantity
+    inventory.quantity = newQuantity
+    const url = `http://localhost:4000/inventoryItem/${id}`;
+    fetch(url, {
+        method: 'PUT',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(data)
+         
+    })
+    .then(res=> res.json())
+    .then(data =>{
+        setInvntory(data );
+        setIsReload(!isReload)
     } )
 };
 
   
     return (
-        <div className='container w-50 py-5 text-center' >
+       
+       <div className='container w-50 py-5 text-center' >
+          
           <div> <h2>Welcome to detail</h2>
                 
                 <img  src={inventory.img} alt="" />
                 <p>{id}</p> 
             <h2>{inventory.name}</h2>
+            <p>Supplier Name: {inventory.supplier}</p>
             <h4>Price: {inventory.price}</h4>
             <h3>Quantity:{inventory.quantity}</h3> 
             <p><small>{inventory.description}</small></p>
-            <button className='btn btn-primary my-5'>Delivered</button>
-            {/* <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}> */}
+            <h5>Sold</h5>
+            <button onClick={handleDelivered} className='btn btn-primary my-5'>Delivered</button>
+            
+            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                
-            <form className='d-flex flex-column w-50 mx-auto' onClick={()=>onSubmit(inventory.quantity)}>
-               
+            {/* <form className='d-flex flex-column w-50 mx-auto' onClick={()=>onSubmit(inventory.quantity)}>
+                */}
                 
-                <input className='mb-2' placeholder='quantity ' type="number" {...register('quantity')} />
-                
-                <input type="submit" value="restock " />
+         <input className='mb-2' placeholder='quantity ' type="number" {...register('quantity')} />
+         <input type="submit" />  Restock the items
+        
             </form>
            </div>
             
             <div className='text-center'>
                 <Link to="/manageInventories">
-                    <button className='btn btn-primary my-5'>Manage Inventories</button>
+                    <button  className='btn btn-primary my-5 '>Manage Inventories</button>
                 </Link>
             </div>
            

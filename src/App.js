@@ -1,10 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
+
 import './App.css';
-import About from './Pages/About/About';
+
 import Blogs from './Pages/Blogs/Blogs';
 
 import Home from './Pages/Home/Home/Home';
-import OurTeams from './Pages/Home/OurTeams/OurTeams';
+
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
@@ -18,6 +19,9 @@ import ManageItems from './Pages/ManageItems/ManageItems';
 import AddItems from './Pages/AddItems/AddItems';
 import MyItems from './Pages/MyItems/MyItems';
 import ManageInventories from './Pages/ManageInventories/ManageInventories';
+
+import Contact from './Pages/Contact/Contact';
+import AddInventory from './Pages/AddInventory/AddInventory';
 
 function App() {
   return (
@@ -42,11 +46,15 @@ function App() {
         <RequireAuth>
           <MyItems></MyItems>
         </RequireAuth>}></Route>
-       <Route path="/about" element={<About></About>}></Route>
-        <Route path="/ourTeams" element={<OurTeams></OurTeams>}></Route>
+       
+       <Route path="/contact" element={<Contact></Contact>}></Route>
+        
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+      
+       <Route path="/addInventory" element={<AddInventory></AddInventory>}></Route>
+      
         <Route path="/manageInventories" element={ <ManageInventories></ManageInventories>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
