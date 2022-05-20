@@ -1,5 +1,6 @@
 # Getting Started node js
 stackoverFlow link: https://stackoverflow.com/questions/72320591/how-to-decrease-quantity-in-node-js
+
 #This froject is about Warehouse management:
 For, complete this project i have to maintain and following many steps:
 1. install npm: 
@@ -28,7 +29,7 @@ For, complete this project i have to maintain and following many steps:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts for this project
 
 In the project directory, you can run:
 
