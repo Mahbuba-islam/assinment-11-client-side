@@ -24,7 +24,7 @@ const ManageInventories = () => {
             })
             .then(res => res.json())
             .then(data => {
-                setInventories(data);
+                console(data);
                 const remaining = inventories.filter(manageInventory => manageInventory._id._id !== id);
                 setInventories(remaining);
             })
@@ -38,8 +38,8 @@ const ManageInventories = () => {
         <div className="Manageinventory-container p-3">
             
         {
-            inventories.map(manageInventory => 
-                <div className='text-center'>
+            inventories.map((manageInventory) =>  
+                <div key = {manageInventory.id}  className='text-center'>
            
                 <Table striped bordered hover>
       

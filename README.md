@@ -1,4 +1,30 @@
-# Getting Started with Create React App
+# Getting Started node js
+stackoverFlow link: https://stackoverflow.com/questions/72320591/how-to-decrease-quantity-in-node-js
+#This froject is about Warehouse management:
+For, complete this project i have to maintain and following many steps:
+1. install npm: 
+   node js
+   bootstrap
+   firebase
+    react
+    react-bootstrap
+    react-dom
+    react-firebase-hooks
+    react-hook-form
+    react-router-dom
+    react-scripts
+    react-toastify
+    web-vitals
+
+2. For Create server side:
+   npm install:
+   1.express
+   2.mongodb
+   3.cors
+
+3. Create 10 and more pages:
+4. for design use bootstrap and row css
+5. use firebase authentication  
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

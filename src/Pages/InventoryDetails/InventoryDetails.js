@@ -14,7 +14,7 @@ const InventoryDetails = () => {
         fetch(url)
        .then(res => res.json())
         .then(data => setInvntory(data))
-    }, [isReload])
+    }, [isReload, id])
 
 //    const handleDeliver = event =>{
 //        const updateQuantity = event.target.value;
@@ -33,16 +33,16 @@ const InventoryDetails = () => {
 //    .then(data => setInvntory( data));
    
 //    };
-const handleDelivered = data => {
-   const previousQuantity = inventory.quantity
-   inventory.quantity = previousQuantity + 1;
+const handleDelivered = quantity => {
+   const updatedQuantity = quantity -1
+   
     const url = `http://localhost:4000/inventoryItem/${id}`;
     fetch(url, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(updatedQuantity)
     })
     .then(res=> res.json())
     .then(data =>{
@@ -51,25 +51,25 @@ const handleDelivered = data => {
     } )
 };
    
-   const onSubmit = data => {
-    // let preQuantity = setInvntory(data);
-    // preQuantity.setQuantity(preQuantity.getQuantity() - 1);
+   const onSubmit = quantity => {
+//   console.log(quantity)
+  const reStock = quantity
+  const preQuantity = inventory.quantity
+  
+  const updateQuantity = preQuantity + reStock
     
-    let preQuantity = inventory.quantity
-    const newQuantity = data + preQuantity
-    inventory.quantity = newQuantity
     const url = `http://localhost:4000/inventoryItem/${id}`;
     fetch(url, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(updateQuantity )
          
     })
     .then(res=> res.json())
-    .then(data =>{
-        setInvntory(data );
+    .then(updateQuantity =>{
+        setInvntory( updateQuantity);
         setIsReload(!isReload)
     } )
 };
@@ -89,7 +89,7 @@ const handleDelivered = data => {
             <h3>Quantity:{inventory.quantity}</h3> 
             <p><small>{inventory.description}</small></p>
             <h5>Sold</h5>
-            <button onClick={handleDelivered} className='btn btn-primary my-5'>Delivered</button>
+            <button onChange={() => handleDelivered} className='btn btn-primary my-5'>Delivered</button>
             
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                
@@ -98,7 +98,7 @@ const handleDelivered = data => {
                 
          <input className='mb-2' placeholder='quantity ' type="number" {...register('quantity')} />
          <input type="submit" />  Restock the items
-        
+         
             </form>
            </div>
             

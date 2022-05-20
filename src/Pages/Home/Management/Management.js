@@ -4,7 +4,7 @@ const Management = ({management}) => {
     const {_id , title , description } = management;
     return (
         <div>
-             <div className='InventoryItem py-2'>
+             <div className='InventoryItem '>
            <h2>{title}</h2>
           <p>{description}</p>
           

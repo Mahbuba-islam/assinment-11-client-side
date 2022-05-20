@@ -12,7 +12,7 @@ const InventoryItems = () => {
         .then(res => res.json())
         .then(data => setInventoryItems(data));
     }, [])
-
+   
     return (
         <div id="inventoryItems" className='container'>
             <div className="row ">
